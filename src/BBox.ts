@@ -13,13 +13,13 @@ export class BBox {
 		public srs?: number
 	) {}
 
-	static fromArray(spec: [ number, number, number, number ], srs: SRS) {
+	static fromArray(spec: (number | string)[], srs: SRS) {
 		if(srs.oldXY) {
 			// Helsinki: 24,60,24,60,epsg:4326
-			return(new BBox(spec[1], spec[0], spec[3], spec[2], srs.epsg));
+			return(new BBox(+spec[1], +spec[0], +spec[3], +spec[2], srs.epsg));
 		} else {
 			// Helsinki: 60,24,60,24,urn:ogc:def:crs:epsg::4326
-			return(new BBox(spec[0], spec[1], spec[2], spec[3], srs.epsg));
+			return(new BBox(+spec[0], +spec[1], +spec[2], +spec[3], srs.epsg));
 		}
 	}
 
