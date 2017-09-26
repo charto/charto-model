@@ -5,5 +5,5 @@ export { SRS } from './SRS';
 export { BBox } from './BBox';
 export { Feature } from './Feature';
 
-export { Layer, LayerFeatures } from './layer/Layer';
+export { Layer, LayerFeatures, LayerFeaturesPromise } from './layer/Layer';
 export { GroupLayer } from './layer/GroupLayer';
