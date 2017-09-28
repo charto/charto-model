@@ -5,7 +5,8 @@ import { Geometry } from 'geobabel';
 
 export class Feature {
 
-	geometryList: Geometry[];
+	key: string;
+	geometries: Geometry[];
 	data: any;
 
 }
