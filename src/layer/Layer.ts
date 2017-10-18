@@ -9,7 +9,7 @@ export type LayerFeaturesPromise = LayerFeatures | Promise<LayerFeatures>;
 
 export abstract class Layer {
 
-	abstract getLayerFeatures(bbox: BBox, pixelWidth?: number, pixelHeight?: number): LayerFeaturesPromise;
+	abstract getLayerFeatures(bbox: BBox, tileNS?: number, tileEW?: number, pixelWidth?: number, pixelHeight?: number): LayerFeaturesPromise;
 
 	name: string;
 
